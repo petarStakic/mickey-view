@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mvw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mickey-view"
+    }
+  },
+  "defaultProject": "mickey-view",
+  "cli": {
+    "analytics": "c6135d1d-cadf-4d98-bec8-a9f285516cd4"
+  }
 }
