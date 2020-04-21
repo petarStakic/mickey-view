@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "mickey-image-viewer": {
+      "projectType": "library",
+      "root": "projects/mickey-image-viewer",
+      "sourceRoot": "projects/mickey-image-viewer/src",
+      "prefix": "miv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mickey-image-viewer/tsconfig.lib.json",
+            "project": "projects/mickey-image-viewer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mickey-image-viewer/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mickey-image-viewer/src/test.ts",
+            "tsConfig": "projects/mickey-image-viewer/tsconfig.spec.json",
+            "karmaConfig": "projects/mickey-image-viewer/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mickey-image-viewer/tsconfig.lib.json",
+              "projects/mickey-image-viewer/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "mickey-view",

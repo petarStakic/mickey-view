@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mickey-image-viewer": [
+        "dist/mickey-image-viewer/mickey-image-viewer",
+        "dist/mickey-image-viewer"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
